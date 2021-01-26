@@ -1,7 +1,24 @@
-<h1>トップページ</h1>
-<% if user_signed_in?%>
-<%= link_to 'ログアウト',  destroy_user_session_path, method: :delete %>
-<% else %>
-<%= link_to 'ログイン', new_user_session_path, class: "test"%>
-<%= link_to '新規登録', new_user_registration_path, class: "test"%>
-<% end %>
+<main class="main">
+  <div class="inner">
+    <div class="main-page">
+      <div class="left-bar">
+        <h1>トップページ</h1>
+      </div>
+      <div class="right-bar">
+        <h5>メニュー表示</h5>
+        <h5>(追加、編集、削除、詳細＋何かあれば追加)</h5>
+          <div class="menu">
+          <ul>
+            <%# 投稿画面へ %>
+            <%= link_to 'スタイルを追加', '#'%><br />
+            <%# 編集画面へ %>
+            <%= link_to 'スタイルを編集', '#' %><br />
+            <%# 削除画面へ %>
+            <%= link_to 'スタイルを削除', '#' %><br />
+            <%# 詳細画面へ %>
+            <%= link_to 'スタイルの詳細', '#' %><br />
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
