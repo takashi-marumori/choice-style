@@ -5,4 +5,7 @@ class Gender < ActiveHash::Base
     { id: 3, name: 'メンズ' },
     { id: 4, name: 'どちらでも' },
   ]
+
+  include ActiveHash::Associations
+  has_many :posts
   end

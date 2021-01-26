@@ -7,4 +7,7 @@ class clothes < ActiveHash::Base
     { id: 5, name: '靴下' },
     { id: 6, name: '靴' },
   ]
+
+  include ActiveHash::Associations
+  has_many :posts
   end

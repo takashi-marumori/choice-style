@@ -7,4 +7,7 @@ class Season < ActiveHash::Base
     { id: 5, name: '冬' },
     { id: 6, name: '一年中' },
   ]
+
+  include ActiveHash::Associations
+  has_many :posts
   end
