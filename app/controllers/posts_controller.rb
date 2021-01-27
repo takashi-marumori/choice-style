@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @results = @p.result
+    @results = @p.result.order('RAND()').limit(1)
   end
 
   private
