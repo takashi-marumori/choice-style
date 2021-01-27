@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @results = @p.result.includes(:clothes_id)
+    @results = @p.result
   end
 
   private
