@@ -2,9 +2,8 @@
   <div class="inner">
     <div class="main-page">
       <div class="left-bar">
-        <h1>登録ページ</h1><br />
-        <h2>登録したい服の画像の情報を入力</h2>
-        <%= form_with model:@post,url:new_post_path,local: true do |f| %>
+        <h1>編集ページ</h1><br />
+        <%= form_with model:@post, url:edit_post_path,local: true do |f| %>
         <%= f.file_field :image, id:"item-image" %>
         <%= f.text_area :explanation, class:"items-text", id:"item-info", placeholder:("メモ：残しておきたい情報を記載（記述しなくても可）") ,maxlength:"100" %><br />
         <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {}) %>

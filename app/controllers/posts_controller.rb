@@ -19,6 +19,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.all
+  end
+
+  def update
+    @post = Post.find(params[:post_id])
+    if @post.update(post_params)
+      redirect_to post_path
+    else
+      render :edit
+    end
+  end
+
   def search
     @results = @p.result.order('RAND()').limit(1)
   end
