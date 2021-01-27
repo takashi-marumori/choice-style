@@ -5,9 +5,9 @@ class Season < ActiveHash::Base
     { id: 3, name: '夏' },
     { id: 4, name: '秋' },
     { id: 5, name: '冬' },
-    { id: 6, name: '一年中' },
+    { id: 6, name: '一年中' }
   ]
 
   include ActiveHash::Associations
   has_many :posts
-  end
+end

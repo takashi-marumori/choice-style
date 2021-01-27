@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :clothes
+  belongs_to :clothe
   belongs_to :season
   belongs_to :gender
 

@@ -7,7 +7,7 @@
         <%= form_with model:@post,local: true do |f| %>
         <%= f.file_field :image, id:"item-image" %>
         <%= f.text_area :explanation, class:"items-text", id:"item-info", placeholder:("メモ：残しておきたい情報を記載（記述しなくても可）") ,maxlength:"100" %><br />
-        <%= f.collection_select(:clothes_id, Clothes.all, :id, :name, {}, {}) %>
+        <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {}) %>
         <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {}) %>
         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {}) %>
         <%= f.submit "出品する" %>
