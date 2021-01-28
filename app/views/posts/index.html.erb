@@ -6,9 +6,9 @@
         <h1>今日のスタイルを決める</h1>
         <%= search_form_for @p, url: posts_search_path do |f| %>
         <%= f.label :season_id_eq, '季節は？' %>
-        <%= f.collection_select(:season_id_eq, Season.all, :id, :name, {}, {}) %>
+        <%= f.collection_select(:season_id_eq, Season.all, :id, :name, {}, {}) %><br />
         <%= f.label :gender_id_eq, '性別は？' %>
-        <%= f.collection_select(:gender_id_eq, Gender.all, :id, :name, {}, {}) %>
+        <%= f.collection_select(:gender_id_eq, Gender.all, :id, :name, {}, {}) %><br />
         <%= f.submit '検索' %>
         <% end %>
       </div>

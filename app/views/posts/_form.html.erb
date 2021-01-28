@@ -1,5 +1,4 @@
-
-  <%= form_with model:@post,local: true do |f| %>
+<%= form_with model:@post,local: true do |f| %>
         
     <div>
     <%= f.label :image, "スタイルを選択" %><br />
@@ -29,6 +28,6 @@
     <div>
     <%= f.submit "出品する" %>
     </div>
-  <% end %>
-  <%=link_to 'もどる', root_path %>
+<% end %>
+<%=link_to 'もどる', root_path %>
 
