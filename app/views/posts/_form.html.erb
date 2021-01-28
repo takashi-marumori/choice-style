@@ -1,0 +1,33 @@
+<%= form_with model:@post,local: true do |f| %>
+        
+    <div>
+    <%= f.label :image, "スタイルを選択" %><br />
+    <%= f.file_field :image %>
+    </div>
+
+    <div>
+    <%= f.label :memo, "メモ：残しておきたい情報を記載（記述しなくても可）" %><br />
+    <%= f.text_area :explanation,maxlength:"100" %><br />
+    </div>
+
+    <div>
+    <%= f.label :clothes_id, "スタイルの種類を選択" %><br />
+    <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {}) %>
+    </div>
+
+    <div>
+    <%= f.label :season_id, "スタイルの種類を選択" %><br />
+    <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {}) %>
+    </div>
+    
+    <div>
+    <%= f.label :gender_id, "スタイルの種類を選択" %><br />
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {}) %>
+    </div>
+  
+    <div>
+    <%= f.submit "出品する" %>
+    </div>
+<% end %>
+<%=link_to 'もどる', root_path %>
+
