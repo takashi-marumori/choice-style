@@ -11,8 +11,8 @@
         <%= f.collection_select(:gender_id_eq, Gender.all, :id, :name, {}, {}) %>
         <%= f.submit '検索' %>
         <% end %>
-          <h5>ここにランダムに服を表示する</h5><br/>
       </div>
-      <%= render partial:"main_page" %>
+      <%= render partial:"main_menu" %>
     </div>
   </div>
+</main>

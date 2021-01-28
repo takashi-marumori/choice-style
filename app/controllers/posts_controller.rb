@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.all
+    @post = Post.find(params[:post_id])
   end
 
   def update
