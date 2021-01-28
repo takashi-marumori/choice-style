@@ -4,7 +4,7 @@
       <div class="left-bar">
          <h1>検索結果</h1>
             <% @results.each do |result| %>
-              <%= link_to edit_post_path(@post) do %>
+               <%= link_to edit_post_path(result) do %>
               <%= image_tag result.image.variant(resize: '100x100') %>
               <% end%>
             <% end %>

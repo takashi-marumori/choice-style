@@ -3,7 +3,7 @@
     <div class="main-page">
     <div class="left-bar">
     <h1>条件を入力してください</h1><br />
-        <%= search_form_for @p, url: posts_search_result_path do |f| %>
+        <%= search_form_for @p, url: posts_search_result_posts_path do |f| %>
         <%= f.label :clothes_id, 'スタイルは？（必須）' %>
         <%= f.collection_select(:clothes_id_eq, Clothe.all, :id, :name, {}, {}) %><br />
         <%= f.submit '検索' %>

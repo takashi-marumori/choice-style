@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-  before_action :search_post, only: [:index, :search, :search_index, :search_result]
+  before_action :search_post, only: [:index, :search, :search_edit, :search_result]
 
   def index
+    @posts = Post.find_by_id(params[:id])
   end
 
   def new
@@ -10,7 +11,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    binding.pry
     if @post.valid?
       @post.save
       redirect_to root_path
@@ -20,29 +20,34 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.all
-    binding.pry
+    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:post_id])
+    @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path
+      redirect_to root_path
     else
       render :edit
     end
+  end
+
+  def show
   end
 
   def search
     @results = @p.result.order('RAND()').limit(1)
   end
 
-  def search_index
-    @post = Post.all
+  def show
+  end
+
+  def search_edit
+    @post = Post.find_by_id(params[:id])
   end
 
   def search_result
-    @post = Post.all
+    @post = Post.find_by_id(params[:id])
     @results = @p.result
   end
 
