@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: :index
   before_action :search_post, only: [:index, :search, :search_edit, :search_edit_result, :search_show, :search_show_result]
+  before_action :set_post, only: [:edit, :update,]
+  before_action :set_post_by_id, only: [:index, :search_edit, :search_edit_result, :search_show, :search_show_result]
+  before_action :search_result, only: [:search_edit_result, :search_show_result]
 
   def index
-    @posts = Post.find_by_id(params[:id])
   end
 
   def new
@@ -20,11 +23,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to root_path
     else
@@ -33,31 +34,23 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def search
     @results = @p.result.order('RAND()').limit(1)
   end
 
-  def show
-  end
-
   def search_edit
-    @post = Post.find_by_id(params[:id])
   end
 
   def search_edit_result
-    @post = Post.find_by_id(params[:id])
-    @results = @p.result
   end
 
   def search_show
-    @post = Post.find_by_id(params[:id])
   end
 
   def search_show_result
-    @post = Post.find_by_id(params[:id])
-    @results = @p.result
   end
 
   private
@@ -68,5 +61,17 @@ class PostsController < ApplicationController
 
   def search_post
     @p = Post.ransack(params[:q])
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def set_post_by_id
+    @post = Post.find_by_id(params[:id])
+  end
+
+  def search_result
+    @results = @p.result
   end
 end
