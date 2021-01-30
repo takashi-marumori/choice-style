@@ -1,0 +1,17 @@
+<main class="main">
+  <div class="inner">
+    <div class="main-page">
+    <div class="left-bar">
+    <h1>削除表示</h1>
+    <h1>条件を入力してください</h1><br />
+        <%= search_form_for @p, url: search_destroy_result_posts_path do |f| %>
+        <%= f.label :clothes_id, 'スタイルは？（必須）' %>
+        <%= f.collection_select(:clothes_id_eq, Clothe.all, :id, :name, {}, {}) %><br />
+        <%= f.submit '検索' %>
+      <% end %>
+        </div>
+      <%= render partial:"main_menu" %>
+    </div>
+    <%=link_to 'もどる', root_path %>
+  </div>
+</main>
