@@ -1,16 +1,8 @@
-<main class="main">
-  <div class="inner">
-    <div class="main-page">
-      <div class="left-bar">
-        <h1>詳細ページ</h1><br />
-        <%= image_tag @post.image.variant(resize: '500x500')%><br />
-        <%= @post.memo %><br />
-        <%= @post.season.name %><br />
-        <%= @post.gender.name %><br />
-        <%= link_to '商品の編集', edit_post_path , method: :get %>
-        <%= link_to '削除', post_path , method: :delete %><br />
-      </div>
-      <%= render partial:"main_menu" %>
-    </div>
-  </div>
-</main>
+<h1>詳細ページ</h1><br />
+<%= image_tag @post.image.variant(resize: '500x500')%><br />
+<%= @post.memo %><br />
+<%= @post.season.name %><br />
+<%= @post.gender.name %><br />
+<%= link_to '商品の編集', edit_post_path , method: :get %>
+<%= link_to '削除', post_path , method: :delete %><br />
+<%= link_to 'もどる', root_path %>

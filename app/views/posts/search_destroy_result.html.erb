@@ -1,16 +1,7 @@
-<main class="main">
-  <div class="inner">
-    <div class="main-page">
-      <div class="left-bar">
-         <h1>検索結果</h1>
-            <% @results.each do |result| %>
-              <%= link_to  post_path(result),method: :delete, data: { confirm: '削除しますか？' } do %>
-              <%= image_tag result.image.variant(resize: '100x100') %>
-              <% end%>
-            <% end %>
-        <%= link_to 'もどる', root_path %>
-      </div>
-      <%= render partial:"main_menu" %>
-    </div>
-  </div>
-</main>
+<h1>検索結果</h1>
+<% @results.each do |result| %>
+  <%= link_to  post_path(result),method: :delete, data: { confirm: '削除しますか？' } do %>
+  <%= image_tag result.image.variant(resize: '100x100') %>
+  <% end%>
+<% end %>
+<%= link_to 'もどる', root_path %>

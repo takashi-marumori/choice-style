@@ -1,14 +1,5 @@
-<main class="main">
-  <div class="inner">
-    <div class="main-page">
-      <div class="left-bar">
-         <h1>検索結果</h1>
-            <% @results.each do |result| %>
-            <%= image_tag result.image.variant(resize: '200x200') %>
-            <% end %>
-        <%= link_to 'もどる', root_path %>
-      </div>
-      <%= render partial:"main_menu" %>
-    </div>
-  </div>
-</main>
+<h1>検索結果</h1>
+<% @results.each do |result| %>
+  <%= image_tag result.image.variant(resize: '200x200') %>
+<% end %>
+<%= link_to 'もどる', root_path %>
