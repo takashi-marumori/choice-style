@@ -26,6 +26,7 @@ header {
 }
 
 .left-header{
+  font-family: Comic Sans MS;
   color: black;
   
 }
@@ -54,4 +55,27 @@ header {
   margin: 10px;
   padding: 10px;
   border:  1px solid #402717;
+}
+
+/*サイドメニュー*/
+.menu-title {
+border-bottom: 2px solid #0bd;
+text-align: center;
+}
+
+.menu-list{
+  font-size:15px;
+  padding:5px 20px;
+}
+
+.menu-item{
+  border-bottom:1px solid black;
+  display: block;
+  color:#33160e;
+  text-decoration: none;
+  padding:5px 0px;
+}
+
+.under-bar{
+  border-bottom:1px dashed;
 }

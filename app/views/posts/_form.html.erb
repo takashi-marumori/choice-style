@@ -16,12 +16,12 @@
     </div>
 
     <div>
-    <%= f.label :season_id, "スタイルの種類を選択" %><br />
+    <%= f.label :season_id, "スタイルを身につけたい季節を選択" %><br />
     <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {}) %>
     </div>
     
     <div>
-    <%= f.label :gender_id, "スタイルの種類を選択" %><br />
+    <%= f.label :gender_id, "スタイルのジャンルを選択" %><br />
     <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {}) %>
     </div>
   
