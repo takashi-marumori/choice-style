@@ -6,7 +6,7 @@
     <div class="style">
     <span class="indispensable">必須</span>
     <%= f.label :image, "スタイルを選択" %><br />
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: :style_label %>
     </div>
 
     <div class="style">
@@ -18,19 +18,19 @@
     <div class="style">
     <span class="indispensable">必須</span>
     <%= f.label :clothes_id, "スタイルの種類を選択" %><br />
-    <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {}) %>
+    <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {class: :style_label}) %>
     </div>
 
     <div class="style">
     <span class="indispensable">必須</span>
     <%= f.label :season_id, "スタイルを身につけたい季節を選択" %><br />
-    <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {}) %>
+    <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class: :style_label}) %>
     </div>
     
     <div class="style">
     <span class="indispensable">必須</span>
     <%= f.label :gender_id, "スタイルのジャンルを選択" %><br />
-    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {}) %>
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: :style_label}) %>
     </div>
   
     <div class="style">
