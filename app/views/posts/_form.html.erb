@@ -1,34 +1,42 @@
-<%= form_with model:@post,local: true do |f| %>
+<div class="style-set-main">
+<h2 class="style-set-title">スタイルの情報を入力してください</h2>
+  <%= form_with model:@post,local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
   
-    <div>
+    <div class="style">
+    <span class="indispensable">必須</span>
     <%= f.label :image, "スタイルを選択" %><br />
     <%= f.file_field :image %>
     </div>
 
-    <div>
-    <%= f.label :memo, "メモ：残しておきたい情報を記載（記述しなくても可）" %><br />
-    <%= f.text_area :memo,maxlength:"100" %><br />
+    <div class="style">
+    <span class="indispensable-blue">任意</span>
+    <%= f.label :memo, "メモ：残しておきたい情報を記載" %><br />
+    <%= f.text_area :memo, class:"style-text", maxlength:"100", placeholder:"例）購入した時期" %><br />
     </div>
 
-    <div>
+    <div class="style">
+    <span class="indispensable">必須</span>
     <%= f.label :clothes_id, "スタイルの種類を選択" %><br />
     <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {}) %>
     </div>
 
-    <div>
+    <div class="style">
+    <span class="indispensable">必須</span>
     <%= f.label :season_id, "スタイルを身につけたい季節を選択" %><br />
     <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {}) %>
     </div>
     
-    <div>
+    <div class="style">
+    <span class="indispensable">必須</span>
     <%= f.label :gender_id, "スタイルのジャンルを選択" %><br />
     <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {}) %>
     </div>
   
-    <div>
+    <div class="style">
     <%= f.submit "送信する" %>
     </div>
-<% end %>
-<%=link_to 'もどる', root_path %>
+  <% end %>
+</div>
+ <%=link_to 'もどる', root_path %>
 

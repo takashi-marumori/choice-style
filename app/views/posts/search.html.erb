@@ -1,5 +1,9 @@
 <h1>検索結果</h1>
-<% @results.each do |result| %>
+<% if @results.length == 0 %>
+  <h3>検索結果ヒットしませんでした</h3>
+<% else %>
+  <% @results.each do |result| %>
   <%= image_tag result.image.variant(resize: '200x200') %>
+  <% end %>
 <% end %>
 <%= link_to 'もどる', root_path %>

@@ -50,6 +50,10 @@ header {
   border: 1px  solid black;
 }
 
+.title{
+  text-decoration: none;
+}
+
 /*メイン*/
 .main-page {
   display: flex;
@@ -70,6 +74,11 @@ header {
   margin: 10px;
   padding: 10px;
   border:  1px solid #402717;
+}
+.set-style{
+  background-color: aquamarine;
+  font-size: 30px;
+  text-align: center;
 }
 
 /*サイドメニュー*/

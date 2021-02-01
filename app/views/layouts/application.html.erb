@@ -12,7 +12,7 @@
   <body>
     <header class="header">
       <div class="left-header">
-        <h1><a href="/">Choice-Style</a></h1>
+        <h1><a href="/" class="title">Choice-Style</a></h1>
       </div>
       <div class="right-header">
         <% if user_signed_in? %>
@@ -27,13 +27,13 @@
           <% end %>
       </div>
     </header>
-    <main class="main">
-      <div class="main-page">
-        <div class="left-bar">
-          <%= yield %>
+      <main class="main">
+        <div class="main-page">
+          <div class="left-bar">
+            <%= yield %>
+          </div>
+          <%= render partial:"posts/main_menu" %>
         </div>
-        <%= render partial:"posts/main_menu" %>
-      </div>
-    </main>
+      </main>
   </body>
 </html>

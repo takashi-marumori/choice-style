@@ -1,7 +1,11 @@
 <h1>検索結果</h1>
+<% if @results.length == 0 %>
+  <h3>検索結果ヒットしませんでした</h3>
+<% else %>
 <% @results.each do |result| %>
   <%= link_to  post_path(result),method: :delete, data: { confirm: '削除しますか？' } do %>
   <%= image_tag result.image.variant(resize: '100x100') %>
-  <% end%>
+  <% end %>
+  <% end %>
 <% end %>
 <%= link_to 'もどる', root_path %>
