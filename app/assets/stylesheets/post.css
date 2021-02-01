@@ -22,17 +22,32 @@ header {
   height: 50px;
   display: flex;
   position: relative;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
 .left-header{
   font-family: Comic Sans MS;
   color: black;
-  
+  margin-left: 50px;
 }
 
 .right-header{
   color: black;
+  margin-right: 30px;
+}
+
+.name{
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 20px;
+}
+
+.post{
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px  solid black;
 }
 
 /*メイン*/

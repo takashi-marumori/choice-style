@@ -1,5 +1,6 @@
 <%= form_with model:@post,local: true do |f| %>
-        
+  <%= render 'shared/error_messages', model: f.object %>
+  
     <div>
     <%= f.label :image, "スタイルを選択" %><br />
     <%= f.file_field :image %>
