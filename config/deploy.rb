@@ -5,7 +5,7 @@ lock '3.15.0'
 set :application, 'choice-style'
 
 # どのリポジトリからアプリをpullするかを指定する
-set :repo_url,  'git@github.com:https://github.com/takashi-marumori/choice-style.git'
+set :repo_url,  'git@github.com:takashi-marumori/choice-style.git'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
