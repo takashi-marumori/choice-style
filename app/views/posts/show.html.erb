@@ -1,16 +1,28 @@
-<main class="main">
-  <div class="inner">
-    <div class="main-page">
-      <div class="left-bar">
-        <h1>詳細ページ</h1><br />
-        <%= image_tag @post.image.variant(resize: '500x500')%><br />
-        <%= @post.memo %><br />
-        <%= @post.season.name %><br />
-        <%= @post.gender.name %><br />
-        <%= link_to '商品の編集', edit_post_path , method: :get %>
-        <%= link_to '削除', post_path , method: :delete %><br />
+<div class="set-style">詳細確認ページ</div><br />
+  <div class="style-set-main">
+    <h2 class="style-set-title"></h2>
+      <div class="show-box">
+        <%= link_to 'スタイルの編集', edit_post_path , method: :get, class:"show-btn" %>
+        <%= link_to 'スタイルの削除', post_path , method: :delete, class:"show-btn" %><br />
       </div>
-      <%= render partial:"main_menu" %>
+    <div class="item-box">
+      <%= image_tag @post.image.variant(resize: '300x300')%><br />
     </div>
-  </div>
-</main>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">季節</th>
+          <td class="detail-value"><%= @post.season.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ジャンル</th>
+          <td class="detail-value"><%= @post.gender.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メモ</th>
+          <td class="detail-value"><%= @post.memo %></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+<%= link_to 'もどる', root_path %>

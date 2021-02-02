@@ -1,16 +1,16 @@
-<main class="main">
-  <div class="inner">
-    <div class="main-page">
-      <div class="left-bar">
-         <h1>検索結果</h1>
-            <% @results.each do |result| %>
-               <%= link_to edit_post_path(result) do %>
-              <%= image_tag result.image.variant(resize: '100x100') %>
-              <% end%>
-            <% end %>
-        <%= link_to 'もどる', root_path %>
-      </div>
-      <%= render partial:"main_menu" %>
-    </div>
+<div class="set-style">検索結果</div><br />
+  <div class="style-set-main">
+    <h2 class="style-set-title"></h2>
+      <% if @results.length == 0 %>
+      <h3>検索結果ヒットしませんでした</h3>
+      <% else %>
+      <div class="style">
+        <% @results.each do |result| %>
+          <%= link_to edit_post_path(result) do %>
+          <%= image_tag result.image.variant(resize: '100x100') %>
+          <% end %>
+        <% end %>
+        </div>
+      <% end %>
   </div>
-</main>
+<%= link_to 'もどる', root_path %>

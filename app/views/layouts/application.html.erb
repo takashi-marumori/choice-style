@@ -11,20 +11,29 @@
 
   <body>
     <header class="header">
-      <div class="left-heade">
-        <h1><a href="/">ChoiceStyle</a></h1>
+      <div class="left-header">
+        <h1><a href="/" class="title">Choice-Style</a></h1>
       </div>
       <div class="right-header">
         <% if user_signed_in? %>
-          <%= current_user.nickname %>
-          <%= link_to "マイページ", "/users/#{current_user.id}" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to "ログイン", new_user_session_path, class: "post" %>
-          <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-        <% end %>
+          <p class="name">
+            <%= current_user.nickname%>さん
+          </p>
+            <%= link_to "マイページ", "/users/#{current_user.id}", class: :post %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :post %>
+          <% else %>
+           <%= link_to "ログイン", new_user_session_path, class: :post %>
+            <%= link_to "新規登録", new_user_registration_path, class: :post %>
+          <% end %>
       </div>
     </header>
-    <%= yield %>
+      <main class="main">
+        <div class="main-page">
+          <div class="left-bar">
+            <%= yield %>
+          </div>
+          <%= render partial:"posts/main_menu" %>
+        </div>
+      </main>
   </body>
 </html>

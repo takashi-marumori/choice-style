@@ -1,14 +1,23 @@
 <div class="right-bar">
-  <h5>メニュー表示</h5>
-  <h5>(追加、編集、削除、詳細＋何かあれば追加)</h5>
+  <div class="menu-title">
+    <h2>メインメニュー</h2>
+  </div>
   <div class="menu">
-    <%# 投稿画面へ %>
-    <%= link_to 'スタイルを追加', new_post_path %><br />
-    <%# 編集画面へ %>
-    <%= link_to 'スタイルを編集', search_edit_posts_path %><br />
-    <%# 削除画面へ %>
-    <%= link_to 'スタイルを削除', search_destroy_posts_path %><br />
-    <%# 詳細画面へ %>
-    <%= link_to 'スタイルの詳細', search_show_posts_path %><br />
+    <div class="menu-list">
+      <%= link_to 'スタイルを追加', new_post_path, class: "menu-item" %><br />
+      <%= link_to 'スタイルを編集', search_edit_posts_path, class: "menu-item" %><br />
+      <%= link_to 'スタイルを削除', search_destroy_posts_path, class: "menu-item" %><br />
+      <%= link_to 'スタイルの詳細', search_show_posts_path, class: "menu-item" %><br />
+    </div>
+  </div>
+  <div class="menu-list-under">
+    <div class="menu-title">
+      <h2>How To Use</h2>
+    </div>
+    <p class="nemu-description">
+    １：メインメニューから<span class="under-bar">スタイルを追加</span>をクリック<br />
+    ２：トップ画面の<span class="under-bar">スタイルを決める</span>をクリック<br />
+    ３：登録しているものからその日着ていくものを決めてくれます。<br />
+    </p>
   </div>
 </div>

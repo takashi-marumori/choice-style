@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :search_post, only: [:index, :search, :search_edit, :search_edit_result, :search_show, :search_show_result, :search_destroy, :search_destroy_result]
+  before_action :search_post,
+                only: [:index, :search, :search_edit, :search_edit_result, :search_show, :search_show_result, :search_destroy,
+                       :search_destroy_result]
   before_action :set_post, only: [:edit, :update, :show]
-  before_action :set_post_by_id, only: [:index, :search_edit, :search_edit_result, :search_show, :search_show_result,:search_destroy, :search_destroy_result, :destroy]
+  before_action :set_post_by_id,
+                only: [:index, :search_edit, :search_edit_result, :search_show, :search_show_result, :search_destroy, :search_destroy_result,
+                       :destroy]
   before_action :search_result, only: [:search_edit_result, :search_show_result, :search_destroy_result]
 
   def index
