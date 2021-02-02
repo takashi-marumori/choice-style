@@ -7,7 +7,7 @@
       <div class="style">
         <% @results.each do |result| %>
           <%= link_to post_path(result) do %>
-          <%= image_tag result.image.variant(resize: '100x100') %>
+          <%= image_tag result.image %>
           <% end %>
         <% end %>
         </div>

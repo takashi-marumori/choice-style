@@ -63,7 +63,7 @@ header {
 .left-bar {
   background-color: #FFFFFF;
   width: 80%;
-  height: 80vh;
+  height: 80%;
   color: black;
   margin: 10px;
   padding: 10px;
@@ -82,7 +82,7 @@ header {
   text-align: center;
 }
 
-/*サイドメニュー*/
+/*メインメニュー*/
 .menu-title {
 border-bottom: 2px solid #0bd;
 text-align: center;
@@ -142,7 +142,8 @@ text-align: center;
 }
 
 .style-text{
-  width: 60%;
+  width: 150%;
+  height: 80px;
   padding: 3px;
   border: 1px solid #ccc;
   font-size: 15px;
@@ -151,6 +152,19 @@ text-align: center;
 
 .style_label{
   margin-left: 40px;
+}
+
+.form-main-top{
+  display: flex;
+}
+
+.image-form{
+  width:60%
+}
+
+.image-item{
+  width: 40%;
+  height: 40%;
 }
 
 /*詳細画面*/
