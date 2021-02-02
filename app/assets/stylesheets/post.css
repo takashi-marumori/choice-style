@@ -55,6 +55,7 @@ header {
 }
 
 /*メイン*/
+
 .main-page {
   display: flex;
   position: relative;
@@ -151,4 +152,42 @@ text-align: center;
 .style_label{
   margin-left: 40px;
 }
-/*検索ページ３種*/
+
+/*詳細画面*/
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+
+.detail-item {
+  width: 20%;
+  background-color:cornsilk;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  background-color: white;
+}
+
+.item-box{
+  text-align: center;
+}
+
+.show-box{
+text-align:center
+}
+
+.show-btn{
+  text-decoration: none;
+  border:1px solid ;
+  padding: 10px 20px;
+  margin: 0 60px;
+}
