@@ -92,6 +92,6 @@ class PostsController < ApplicationController
   end
 
   def kaminari
-    @post = Post.page(params[:page]).per(10)
+    @post = Post.page(params[:page]).per(12)
   end
 end
