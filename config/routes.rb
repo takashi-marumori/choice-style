@@ -12,4 +12,5 @@ Rails.application.routes.draw do
       get 'search_destroy_result'
     end
   end
+  resources :users, only: :show
 end
