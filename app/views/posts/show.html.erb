@@ -1,12 +1,11 @@
 <div class="set-style">詳細確認ページ</div><br />
   <div class="style-set-main">
-    <h2 class="style-set-title"></h2>
       <div class="show-box">
         <%= link_to 'スタイルの編集', edit_post_path , method: :get, class:"show-btn" %>
         <%= link_to 'スタイルの削除', post_path , method: :delete, class:"show-btn" %><br />
       </div>
     <div class="item-box">
-      <%= image_tag @post.image%><br />
+      <%= image_tag @post.image, class:"image-big" %><br />
     </div>
     <table class="detail-table">
       <tbody>
@@ -24,5 +23,6 @@
         </tr>
       </tbody>
     </table>
-    </div>
-<%= link_to 'もどる', root_path %>
+    <%= link_to 'もどる', root_path %>
+  </div>
+

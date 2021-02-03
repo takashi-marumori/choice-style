@@ -21,7 +21,6 @@
 |season            |integer   |null: false,ActiveHash   |
 |gender            |integer   |null: false,ActiveHash   |
 |clothes           |integer   |null: false,ActiveHash   |
-|image             |          |ActiveStorage            |
 
 ### Association
 - belongs_to :user

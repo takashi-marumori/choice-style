@@ -3,3 +3,15 @@ img {
   width: 200px;
   object-fit: contain;
 }
+
+.image-small{
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.image-big{
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}

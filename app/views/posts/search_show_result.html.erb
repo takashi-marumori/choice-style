@@ -7,10 +7,10 @@
       <div class="style">
         <% @results.each do |result| %>
           <%= link_to post_path(result) do %>
-          <%= image_tag result.image %>
+          <%= image_tag result.image, class:"image-small" %>
           <% end %>
         <% end %>
         </div>
       <% end %>
+      <%= link_to 'もどる', root_path %>
   </div>
-<%= link_to 'もどる', root_path %>
