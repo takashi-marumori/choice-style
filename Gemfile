@@ -68,6 +68,7 @@ gem 'active_hash'
 gem 'ransack'
 gem 'pry-rails'
 gem "aws-sdk-s3", require: false
+gem 'kaminari'
 
 group :production do
   gem 'unicorn', '5.4.1'
