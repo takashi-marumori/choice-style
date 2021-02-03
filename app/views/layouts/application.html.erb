@@ -5,8 +5,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -17,7 +19,7 @@
       <div class="right-header">
         <% if user_signed_in? %>
           <p class="name">
-            <%= current_user.nickname%>さん
+            ようこそ、<%= current_user.nickname %>さん
           </p>
             <%= link_to "マイページ", "/users/#{current_user.id}", class: :post %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :post %>

@@ -12,5 +12,6 @@
         <% end %>
         </div>
       <% end %>
-      <%= link_to 'もどる', root_path %>
+      <%= paginate @post, class:"pagination" %>
+      <%= link_to 'もどる', root_path, class:"re-btn" %>
   </div>
