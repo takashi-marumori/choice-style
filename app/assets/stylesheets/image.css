@@ -5,8 +5,8 @@ img {
 }
 
 .image-small{
-  height: 120px;
-  width: 120px;
+  height: 115px;
+  width: 115px;
   object-fit: contain;
 }
 

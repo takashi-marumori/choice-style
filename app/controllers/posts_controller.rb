@@ -8,6 +8,7 @@ class PostsController < ApplicationController
                 only: [:index, :search_edit, :search_edit_result, :search_show, :search_show_result, :search_destroy, :search_destroy_result,
                        :destroy]
   before_action :search_result, only: [:search_edit_result, :search_show_result, :search_destroy_result]
+  before_action :kaminari, only: [:search_edit_result, :search_show_result, :search_destroy_result]
 
   def index
   end
@@ -88,5 +89,9 @@ class PostsController < ApplicationController
 
   def search_result
     @results = @p.result
+  end
+
+  def kaminari
+    @post = Post.page(params[:page]).per(10)
   end
 end
