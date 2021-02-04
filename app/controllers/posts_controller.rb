@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    binding.pry
     if @post.valid?
       @post.save
       redirect_to root_path
@@ -72,7 +73,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:memo, :clothes_id, :season_id, :gender_id, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:memo, :clothes_id, :season_id, :gender_id, images: []).merge(user_id: current_user.id)
   end
 
   def search_post

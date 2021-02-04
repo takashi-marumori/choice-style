@@ -7,7 +7,9 @@
       <div class="style">
         <% @results.each do |result| %>
           <%= link_to  post_path(result),method: :delete, data: { confirm: '削除しますか？' } do %>
-          <%= image_tag result.image, class:"image-small" %>
+            <% result.images.each do |image|%>
+              <%= image_tag image, class:"image-small" %>
+            <% end %>
           <% end %>
         <% end %>
         </div>

@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :clothe
@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   belongs_to :gender
 
   with_options presence: true do
-    validates :image
+    validates :images
     with_options numericality: { other_than: 1 } do
       validates :clothes_id
       validates :season_id

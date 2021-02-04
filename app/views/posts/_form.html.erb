@@ -7,8 +7,8 @@
   
         <div class="style">
         <span class="indispensable">必須</span>
-        <%= f.label :image, "スタイルを選択" %><br />
-        <%= f.file_field :image, class: :style_label %>
+        <%= f.label :images, "スタイルを選択" %><br />
+        <%= f.file_field :images,name: 'post[images][]', id: 'post_image', class: :style_label, multiple: true %>
         </div>
 
         <div class="style">
