@@ -7,7 +7,9 @@
       <div class="style">
         <% @results.each do |result| %>
         <%= link_to post_path(result) do %>
-          <%= image_tag result.image %>
+          <% result.images.each do |image|%>
+            <%= image_tag image %>
+          <% end%>
           <% end %>
         <% end %>
         </div>

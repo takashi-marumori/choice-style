@@ -5,7 +5,11 @@
         <%= link_to 'スタイルの削除', post_path , method: :delete, class:"show-btn" %><br />
       </div>
     <div class="item-box">
-      <%= image_tag @post.image, class:"image-big" %><br />
+
+    <% @post.images.each do |image|%>
+      <%= image_tag image, class:"image-big"%>
+    <% end %>
+
     </div>
     <table class="detail-table">
       <tbody>
@@ -25,4 +29,3 @@
     </table>
     <%= link_to 'もどる', root_path, class:"re-btn" %>
   </div>
-
