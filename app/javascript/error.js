@@ -5,15 +5,8 @@ if (document.URL.match( /sign_up/ )) {
     const passWord = document.getElementById("registration-password");
     const passWordConfirmation = document.getElementById("registration-password-confirmation");
 
-    const eMailValidate = /^[a-z]+@[a-z]$/;
-    const passWordValidate = /^(?=.*[a-z])(?=.*[0-9]){6,}$/;
-
-    const nickNameError = document.getElementById("nickname-error")
-    const eMailError = document.getElementById("email-error")
-    const passWordError = document.getElementById("password-error")
-    const passWordConfirmationError = document.getElementById("password-confirmation-error")
-
     nickName.addEventListener("blur", e => { 
+      const nickNameError = document.getElementById("nickname-error")
       if (nickName.value != ""){
         nickNameError.setAttribute("hidden", true)
       } else {
@@ -23,6 +16,8 @@ if (document.URL.match( /sign_up/ )) {
     })
 
     eMail.addEventListener("blur", e => { 
+      const eMailError = document.getElementById("email-error")
+      const eMailValidate = /^[a-z]+@[a-z]$/;
       if (eMailValidate.test(eMail.value)){
         eMailError.setAttribute("hidden", true)
       } else {
@@ -32,6 +27,8 @@ if (document.URL.match( /sign_up/ )) {
     })
 
     passWord.addEventListener("blur", e => { 
+      const passWordError = document.getElementById("password-error")
+      const passWordValidate = /^(?=.*[a-z])(?=.*[0-9])[0-9a-z]{6,}$/;
       if (passWordValidate.test(passWord.value)){
         passWordError.setAttribute("hidden", true)
       } else {
@@ -41,6 +38,7 @@ if (document.URL.match( /sign_up/ )) {
     })
 
     passWordConfirmation.addEventListener("blur", e => { 
+      const passWordConfirmationError = document.getElementById("password-confirmation-error")
       if (passWord.value == passWordConfirmation.value){
         passWordConfirmationError.setAttribute("hidden", true)
       } else {
