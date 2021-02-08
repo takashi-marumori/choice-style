@@ -232,3 +232,9 @@ text-align:center;
 display: flex;
 justify-content: center;
 }
+
+/*登録*/
+
+.red{
+  color:red;
+}
