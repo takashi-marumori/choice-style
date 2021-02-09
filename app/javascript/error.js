@@ -16,7 +16,7 @@ if (document.URL.match( /sign_up/ )) {
 
     eMail.addEventListener("blur", e => { 
       const eMailError = document.getElementById("email-error")
-      const eMailValidate = /^[a-z]+@[a-z]$/;
+      const eMailValidate = /^[a-z]+@[a-z]{1,}$/;
       if (eMailValidate.test(eMail.value)){
         eMailError.setAttribute("hidden", true)
       } else {
