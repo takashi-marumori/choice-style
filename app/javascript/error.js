@@ -11,7 +11,6 @@ if (document.URL.match( /sign_up/ )) {
         nickNameError.setAttribute("hidden", true)
       } else {
         nickNameError.removeAttribute("hidden")
-        nickNameError.innerHTML = `※ニックネームの入力が必要です`
       }
     })
 
@@ -22,7 +21,6 @@ if (document.URL.match( /sign_up/ )) {
         eMailError.setAttribute("hidden", true)
       } else {
         eMailError.removeAttribute("hidden")
-        eMailError.innerHTML = `※◯◯@◯◯の形での入力が必要です`
       }
     })
 
@@ -33,7 +31,6 @@ if (document.URL.match( /sign_up/ )) {
         passWordError.setAttribute("hidden", true)
       } else {
         passWordError.removeAttribute("hidden")
-        passWordError.innerHTML = `※パスワードは英数字６文字以上です`
       }
     })
 
@@ -43,7 +40,6 @@ if (document.URL.match( /sign_up/ )) {
         passWordConfirmationError.setAttribute("hidden", true)
       } else {
         passWordConfirmationError.removeAttribute("hidden")
-        passWordConfirmationError.innerHTML = `※パスワードと一致しません`
       }
     })
 
