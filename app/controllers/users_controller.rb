@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def check
-    users = User.pluck("email")
+    users = User.pluck('email')
     render json: { users: users }
   end
 end
