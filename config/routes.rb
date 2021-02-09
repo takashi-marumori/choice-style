@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: :show
+
+  get 'users', to: 'users#check'
 end

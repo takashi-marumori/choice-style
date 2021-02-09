@@ -13,6 +13,7 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autocomplete: "email", id:"registration-email" %>
     <div id="email-error", class="red", hidden>※◯◯@◯◯の形での入力が必要です</div>
+    <div id="email-error-uniq", class="red", hidden>使われているメールアドレスです</div>
   </div>
 
   <div class="field">

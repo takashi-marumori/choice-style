@@ -7,7 +7,8 @@ if (document.URL.match( /sign_up/ )) {
 
     nickName.addEventListener("blur", e => { 
       const nickNameError = document.getElementById("nickname-error")
-      if (nickName.value != ""){
+      const nickNameValidate = /^[a-zA-Z0-9ぁ-んァ-ン一-龥ｧ-ﾝﾞﾟ]{1,}$/;
+      if (nickNameValidate.test(nickName.value)){
         nickNameError.setAttribute("hidden", true)
       } else {
         nickNameError.removeAttribute("hidden")
@@ -21,6 +22,20 @@ if (document.URL.match( /sign_up/ )) {
         eMailError.setAttribute("hidden", true)
       } else {
         eMailError.removeAttribute("hidden")
+      }
+
+      const eMailErrorUniq = document.getElementById("email-error-uniq")
+      const XHR = new XMLHttpRequest();
+      XHR.open("GET", `/users`, true);
+      XHR.responseType = "json";
+      XHR.send();
+      XHR.onload = () => {
+        const uniq = XHR.response.users;
+        if (uniq.includes(eMail.value)) {
+          eMailErrorUniq.removeAttribute("hidden");
+        } else {
+          eMailErrorUniq.setAttribute("hidden", true);
+        }
       }
     })
 
