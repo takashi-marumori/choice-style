@@ -4,10 +4,23 @@
   <%= search_form_for @p, url: search_show_result_posts_path do |f| %>
     <div class="style">
       <span class="indispensable">必須</span>
-      <%= f.label :clothes_id, 'スタイルを選択' %><br />
+      <%= f.label :clothes_id, 'スタイルの種類を選択' %><br />
       <%= f.collection_select(:clothes_id_eq, Clothes.all, :id, :name, {}, {class: :style_label}) %><br />
     </div>
 
+        <h2 class="style-set-title">さらに条件を選択する</h2>
+
+          <div class="style">
+        <span class="indispensable-blue">任意</span>
+          <%= f.label :season_id_eq, '季節を選択' %><br />
+          <%= f.collection_select(:season_id_eq, Season.where.not(id:1), :id, :name, {include_blank: '指定しない'}, {class: :style_label}) %>
+          </div>
+
+          <div class="style">
+        <span class="indispensable-blue">任意</span>
+            <%= f.label :gender_id_eq, 'ジャンルを選択' %><br />
+            <%= f.collection_select(:gender_id_eq, Gender.where.not(id:1), :id, :name, {include_blank: '指定しない'}, {class: :style_label}) %>
+          </div>
     <div class="style">
       <%= f.submit '検索', class:"search-btn" %>
     </div>
