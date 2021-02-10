@@ -5,19 +5,19 @@
           <div class="style">
           <span class="indispensable">必須</span>
           <%= f.label :clothes_id_eq, "スタイルの種類を選択" %><br />
-          <%= f.collection_select(:clothes_id_eq, Clothe.all, :id, :name, {}, {class: :style_label}) %>
+          <%= f.collection_select(:clothes_id_eq, Clothes.where.not(id:1), :id, :name, {include_blank: '指定しない'}, {class: :style_label}) %>
           </div>
 
           <div class="style">
           <span class="indispensable">必須</span>
           <%= f.label :season_id_eq, '季節を選択' %><br />
-          <%= f.collection_select(:season_id_eq, Season.all, :id, :name, {}, {class: :style_label}) %>
+          <%= f.collection_select(:season_id_eq, Season.where.not(id:1), :id, :name, {include_blank: '指定しない'}, {class: :style_label}) %>
           </div>
 
           <div class="style">
           <span class="indispensable">必須</span>
             <%= f.label :gender_id_eq, 'ジャンルを選択' %><br />
-            <%= f.collection_select(:gender_id_eq, Gender.all, :id, :name, {}, {class: :style_label}) %>
+            <%= f.collection_select(:gender_id_eq, Gender.where.not(id:1), :id, :name, {include_blank: '指定しない'}, {class: :style_label}) %>
           </div>
 
           <div class="style">

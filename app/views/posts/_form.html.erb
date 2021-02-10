@@ -14,7 +14,7 @@
         <div class="style">
         <span class="indispensable">必須</span>
         <%= f.label :clothes_id, "スタイルの種類を選択" %><br />
-        <%= f.collection_select(:clothes_id, Clothe.all, :id, :name, {}, {class: :style_label}) %>
+        <%= f.collection_select(:clothes_id, Clothes.all, :id, :name, {}, {class: :style_label}) %>
         </div>
 
         <div class="style">

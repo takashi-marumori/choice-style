@@ -5,7 +5,7 @@
     <div class="style">
       <span class="indispensable">必須</span>
       <%= f.label :clothes_id, 'スタイルを選択' %><br />
-      <%= f.collection_select(:clothes_id_eq, Clothe.all, :id, :name, {}, {class: :style_label}) %><br />
+      <%= f.collection_select(:clothes_id_eq, Clothes.all, :id, :name, {}, {class: :style_label}) %><br />
     </div>
 
     <div class="style">

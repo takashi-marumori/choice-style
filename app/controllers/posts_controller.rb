@@ -88,7 +88,7 @@ class PostsController < ApplicationController
   end
 
   def search_result
-    @results = @p.result
+    @results = @p.result.order('created_at DESC')
   end
 
   def kaminari

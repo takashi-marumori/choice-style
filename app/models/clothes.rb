@@ -1,4 +1,4 @@
-class Clothe < ActiveHash::Base
+class Clothes < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '帽子' },
