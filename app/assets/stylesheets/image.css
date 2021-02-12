@@ -18,3 +18,12 @@ img {
   background-color: white;
   margin: 20px;
 }
+
+.image-bigger{
+  height: 400px;
+  width: 400px;
+  object-fit: contain;
+  background-color: white;
+  margin: 20px;
+  
+}
