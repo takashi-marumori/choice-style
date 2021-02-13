@@ -31,10 +31,14 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
-      redirect_to search_edit_posts_path
+    if @post.user_id == current_user.id
+      if @post.update(post_params)
+        redirect_to search_edit_posts_path
+      else
+        render :edit
+      end
     else
-      render :edit
+      redirect_to root_path
     end
   end
 
@@ -43,7 +47,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find_by_id(params[:id])
-    @post.destroy
+    @post.destroy if @post.user_id == current_user.id
     redirect_to search_destroy_posts_path
   end
 
