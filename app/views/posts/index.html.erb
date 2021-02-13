@@ -29,32 +29,50 @@
           <% end %>
   </div>
 <% else %>
-<div class="set-style">ご利用には、ログインまたは新規登録が必要です</div><br />
+  <div class="prompt">ご利用には、
+    <%= link_to "ログイン", new_user_session_path %>
+    または
+    <%= link_to "新規登録", new_user_registration_path %>
+    が必要です
+    </div><br />
 
-      <div class='select-reason-contents'>
-        <h2 class='title'>このアプリケーションの詳細説明</h2>
-    <ul class='reason-lists'>
+  <div class="first-exp">
+    朝、何着ていこう。そう思ったことはありませんか？<br />
+    そんな方の助けになれるかもしれません
+  </div>
+
+  <div class='first-contact'>
+    <h2 class='title'>詳細説明</h2>
+    <ul class='contact-lists'>
       <li class='list'>
-        <%= image_tag "image-1.png", class:"list-pict" %>
-        <span class='reason-list-number'>1</span>
-        <h3 class='reason-list-text'>
-          <span class='reason-list-blue-text'>3分</span>
-          ですぐに出品
-        </h3>
-        <p class='reason-list-description'>
-          スマホで入力するだけで簡単に出品できる！
-        </p>
+        <%= image_tag "image-1", class:"list-pict" %>
+        <span class='contact-list-number'>1</span>
+        <div class='contact-list-text'>
+          <span class='contact-list-underline'>まずはスタイルを登録します</span>
+        </div>
+        <div class='contact-description-ano'>
+          右のメインメニューの『スタイルを登録』から可能です
+        </div>
       </li>
       <li class='list'>
-        <%= image_tag "image-2.png", class:"list-pict" %>
-        <span class='reason-list-number'>2</span>
-        <h3 class='reason-list-text'>
-          <span class='reason-list-blue-text'>3分</span>
-          ですぐに出品
-        </h3>
-        <p class='reason-list-description'>
-          スマホで入力するだけで簡単に出品できる！
-        </p>
+        <%= image_tag "image-2", class:"list-pict" %>
+        <span class='contact-list-number'>2</span>
+        <div class='contact-list-text'>
+          <span class='contact-list-underline'>次にトップページから条件を入力します</span>
+        </div>
+        <div class='contact-description'>
+          種類の選択は必須ですが、その他は任意に決められます
+        </div>
+      </li>
+            <li class='list'>
+        <%= image_tag "image-3", class:"list-pict" %>
+        <span class='contact-list-number'>3</span>
+        <div class='contact-list-text'>
+         <span class='contact-list-underline'>今日のあなたのスタイルを決めてくれます</span>
+        </div>
+        <div class='contact-description'>
+          身に付けるか、付けないかはあなた次第です。
+        </div>
       </li>
     </ul>
   </div>

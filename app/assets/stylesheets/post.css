@@ -67,13 +67,14 @@ header {
 /*メイン*/
 
 main{
+  min-height: 90vh;
   background-color:#f5f5f5;
 }
 
 .main-page {
   display: flex;
   position: relative;
-  height: 90vh;
+  height: 90%;
 }
 .left-bar {
   width: 80%;
@@ -288,37 +289,40 @@ justify-content: center;
 }
 
 /*ログイン前*/
-.select-reason-contents {
-  padding: 5vh 15vw;
+
+.prompt{
+font-size: 20px;
+text-align: center;
 }
 
-.select-reason-contents>.title {
+.first-exp{
+font-size: 30px;
+text-align: center;
+border: 3px solid #0bd;
+padding: 30px 0;
+margin: 0 50px 50px 50px;
+}
+
+.first-contact {
+  padding: 10px;
+}
+
+.first-contact>.title {
   text-align: center;
-  font-size: 3.5vh;
+  font-size: 25px;
   font-weight: bold;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   position: relative;
 }
 
-.select-reason-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.reason-lists {
+.contact-lists {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.reason-lists>.list {
-  width: 33vh;
+.contact-lists>.list {
+  width: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -328,32 +332,38 @@ justify-content: center;
 .list-pict {
   margin-bottom: 20px;
   width: 100%;
+  border: 1px solid;
 }
 
-.reason-list-number {
+.contact-list-number {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   font-size: 30px;
   text-align: center;
-  line-height: 60px;
-  background-color: #3ccace;
+  background-color: #0bd;
   color: #fff;
 }
 
-.reason-list-text {
+.contact-list-text {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 50px;
 }
 
-.reason-list-blue-text {
-  color: #3ccace;
+.contact-list-underline {
+  border-bottom: 2px dashed;
 }
 
-.reason-list-description {
+.contact-description-ano{
+  padding-top: 50px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.contact-description {
   font-size: 18px;
   margin-top: 20px;
 }
