@@ -26,7 +26,13 @@ ja:
 
 
   activerecord:
-   attributes:
-     user:
-       nickname: ニックネーム
-       date: 生年月日
+    attributes:
+      user:
+        nickname: ニックネーム
+        date: 生年月日
+
+      post:
+        images: 画像
+        clothes_id: 種類
+        season_id: 季節
+        gender_id: ジャンル

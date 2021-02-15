@@ -8,7 +8,7 @@ if (document.URL.match( /sign_up/ )) {
     nickName.addEventListener("blur", e => { 
       const nickNameError = document.getElementById("nickname-error")
       const nickNameValidate = /^[a-zA-Z0-9ぁ-んァ-ン一-龥ｧ-ﾝﾞﾟ]{1,}$/;
-      if (nickNameValidate.test(nickName.value)){
+      if (nickNameValidate.test(nickName.value.replace(/\s+/g, ""))){
         nickNameError.setAttribute("hidden", true)
       } else {
         nickNameError.removeAttribute("hidden")
@@ -41,7 +41,7 @@ if (document.URL.match( /sign_up/ )) {
 
     passWord.addEventListener("blur", e => { 
       const passWordError = document.getElementById("password-error")
-      const passWordValidate = /^(?=.*[a-z])(?=.*[0-9])[0-9a-z]{6,}$/;
+      const passWordValidate = /^(?=.*[a-zA-Z])(?=.*[0-9])[0-9a-zA-Z]{6,}$/;
       if (passWordValidate.test(passWord.value)){
         passWordError.setAttribute("hidden", true)
       } else {

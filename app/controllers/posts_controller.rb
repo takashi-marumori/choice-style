@@ -21,9 +21,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.valid?
       @post.save
-      redirect_to root_path
+      redirect_to new_post_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -31,10 +31,14 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
-      redirect_to root_path
+    if @post.user_id == current_user.id
+      if @post.update(post_params)
+        redirect_to search_edit_posts_path
+      else
+        render :edit
+      end
     else
-      render :edit
+      redirect_to root_path
     end
   end
 
@@ -43,12 +47,12 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find_by_id(params[:id])
-    @post.destroy
-    redirect_to root_path
+    @post.destroy if @post.user_id == current_user.id
+    redirect_to search_destroy_posts_path
   end
 
   def search
-    @results = @p.result.order('RAND()').limit(1)
+    @results = @p.result.where(user_id: current_user.id).order('RAND()').limit(1)
   end
 
   def search_edit
@@ -88,7 +92,7 @@ class PostsController < ApplicationController
   end
 
   def search_result
-    @results = @p.result.order('created_at DESC')
+    @results = @p.result.where(user_id: current_user.id).order('created_at DESC')
   end
 
   def kaminari

@@ -4,11 +4,12 @@
       <% if @results.length == 0 %>
       <h3>検索結果ヒットしませんでした</h3>
       <% else %>
-      <div class="style">
+      <div class="result-style">
+      <div class="result-text">本日のあなたのスタイルはこちら</div>
         <% @results.each do |result| %>
         <%= link_to post_path(result) do %>
           <% result.images.each do |image|%>
-            <%= image_tag image %>
+            <%= image_tag image , class:"image-bigger"%>
           <% end%>
           <% end %>
         <% end %>

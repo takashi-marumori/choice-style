@@ -27,9 +27,12 @@
         </tr>
         <tr>
           <th class="detail-item">メモ</th>
-          <td class="detail-value"><%= @post.memo %></td>
+          <td class="detail-value-memo"><%= @post.memo %></td>
         </tr>
       </tbody>
     </table>
-    <%= link_to 'もどる', root_path, class:"re-btn" %>
+    <div class="re-btn">
+      <a href="javascript:history.back()">[１つ前に戻る]</a>
+      <%= link_to 'もどる', root_path %>
+    </div>
   </div>
