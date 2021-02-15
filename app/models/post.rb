@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   belongs_to :season
   belongs_to :gender
 
-  with_options presence: {message: 'を選択してください'} do
+  with_options presence: { message: 'を選択してください' } do
     validates :images
     with_options numericality: { other_than: 1, message: 'を選択してください' } do
       validates :clothes_id

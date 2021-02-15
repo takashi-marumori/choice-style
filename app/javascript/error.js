@@ -41,7 +41,7 @@ if (document.URL.match( /sign_up/ )) {
 
     passWord.addEventListener("blur", e => { 
       const passWordError = document.getElementById("password-error")
-      const passWordValidate = /^(?=.*[a-z])(?=.*[0-9])[0-9a-z]{6,}$/;
+      const passWordValidate = /^(?=.*[a-zA-Z])(?=.*[0-9])[0-9a-zA-Z]{6,}$/;
       if (passWordValidate.test(passWord.value)){
         passWordError.setAttribute("hidden", true)
       } else {

@@ -3,30 +3,44 @@
   <div class="form-main-top">
     <div class="image-form">
       <%= form_with model:@post, id:"image",local: true do |f| %>
-      <%= render 'shared/error_messages', model: f.object %>
+        <% if @post.errors.any? %>
+          <span class="error-message"><%= pluralize(@post.errors.count, "件のエラーです") %></span>
+        <% end %>
   
         <div class="style">
         <span class="indispensable">必須</span>
         <%= f.label :images, "スタイルを選択" %><br />
         <%= f.file_field :images,name: 'post[images][]', id: 'post_image', class: :style_label, multiple: true %>
+          <% if @post.errors.include?(:images) %>
+            <span class="error-message"><%= @post.errors.full_messages_for(:images).first %></span>
+          <% end %>
         </div>
 
         <div class="style">
         <span class="indispensable">必須</span>
         <%= f.label :clothes_id, "スタイルの種類を選択" %><br />
         <%= f.collection_select(:clothes_id, Clothes.all, :id, :name, {}, {class: :style_label}) %>
+          <% if @post.errors.include?(:clothes_id) %>
+            <span class="error-message"><%= @post.errors.full_messages_for(:clothes_id).first %></span>
+          <% end %>
         </div>
 
         <div class="style">
         <span class="indispensable">必須</span>
         <%= f.label :season_id, "スタイルを身につけたい季節を選択" %><br />
         <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class: :style_label}) %>
+          <% if @post.errors.include?(:season_id) %>
+            <span class="error-message"><%= @post.errors.full_messages_for(:season_id).first %></span>
+          <% end %>
         </div>
     
         <div class="style">
         <span class="indispensable">必須</span>
         <%= f.label :gender_id, "スタイルのジャンルを選択" %><br />
         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: :style_label}) %>
+          <% if @post.errors.include?(:gender_id) %>
+            <span class="error-message"><%= @post.errors.full_messages_for(:gender_id).first %></span>
+          <% end %>
         </div>
 
         <div class="style">
