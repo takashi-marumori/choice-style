@@ -59,7 +59,7 @@
 - 後日
 
 # ER図
-- 後日
+[![Image from Gyazo](https://i.gyazo.com/4b002fe187443cd225e4e8583cb72a6d.png)](https://gyazo.com/4b002fe187443cd225e4e8583cb72a6d)
 
 # テーブル設計
 
@@ -88,5 +88,13 @@
 ### Association
 - belongs_to :user
 
-# gitclone
-git clone https://github.com/takashi-marumori/choice-style.git
+# ローカル環境
+- rails 6.0.0
+
+## git clone
+% cd
+% git clone https://github.com/takashi-marumori/choice-style.git
+% bundle install
+% yarn install
+% rails db:create
+% rails db:migrate
