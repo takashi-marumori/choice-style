@@ -1,5 +1,5 @@
 <div class="set-style">スタイルを編集する</div><br />
-  <div class="style-set-main">
+  <div class="style-set-main-exp">
     <h2 class="style-set-title">条件を入力してください</h2>
       <%= search_form_for @p, url: search_edit_result_posts_path do |f| %>
     <div class="style">
@@ -25,5 +25,7 @@
       <%= f.submit '検索', class:"search-btn" %>
     </div>
       <% end %>
-      <%= link_to 'もどる', root_path, class:"re-btn" %>
+      <div class="re-btn">
+        <%= link_to 'もどる', root_path %>
+      </div>
   </div>

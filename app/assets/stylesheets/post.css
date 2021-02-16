@@ -137,14 +137,38 @@ text-align: center;
 
 /*フォーム*/
 .style-set-main{
-  padding: 0 5vw;
+  padding: 0 2vw;
+}
+
+.style-set-main-exp{
+  text-align: center;
 }
 
 .style-set-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom:30px;
-  padding-left: 60px;
+  text-align: center;
+}
+
+.style-indispensable {
+  background: #ea352d;
+  margin-left: 110px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.style-indispensable-blue{
+  background: blue;
+  margin-left: 110px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .indispensable {
@@ -168,7 +192,7 @@ text-align: center;
 }
 
 .style{
-  margin:20px;
+  margin: 20px 0;
 }
 
 .result-style{
@@ -186,11 +210,15 @@ text-align: center;
   padding: 3px;
   border: 1px solid #ccc;
   font-size: 15px;
-  margin-left: 40px;
+  margin-left: 140px;
+}
+
+.style_label_form{
+  margin-left: 140px;
 }
 
 .style_label{
-  margin-left: 40px;
+  text-align: center;
 }
 
 .form-main-top{
@@ -212,18 +240,27 @@ text-align: center;
 }
 
 .re-btn{
+  margin: 120px;
+  font-size: 20px;
+}
+
+.form-btn{
+  margin-left: 140px;
+  font-size: 20px;
+}
+
+.ja-btn{
   display: flex;
   justify-content: space-around;
   font-size: 20px;
 }
 
 .send-btn{
-  margin-left:40px;
+  margin-left:140px;
   padding: 5px 15px;
 }
 
 .search-btn{
-  margin-left:40px;
   padding: 5px 15px;
 }
 
