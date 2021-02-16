@@ -56,7 +56,8 @@
 |ajaxを利用して検索結果をその場に出す機能|詳細などの検索結果を横に出せれば、画面遷移の必要がなくなるため|jsonでの通信がうまくいかず|javascriptの更なる理解が必要<br />ユーザー詳細を触っている時に、before_action :authenticate_user!をコントローラーに定義しているとrender json:が変な挙動をすることを確認。<br />authenticate_user!を外せば何か変わるかもしれない。要検証|
 
 # 機能のgif
-- 後日
+- ランダムで出力される様子
+[![Image from Gyazo](https://i.gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa.gif)](https://gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa)
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/4b002fe187443cd225e4e8583cb72a6d.png)](https://gyazo.com/4b002fe187443cd225e4e8583cb72a6d)
