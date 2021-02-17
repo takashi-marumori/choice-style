@@ -36,30 +36,30 @@ header {
 
 .left-header{
   font-family: Comic Sans MS;
-  margin-left: 50px;
+  margin-left: 4vw;
 }
 
 .right-header{
-  color: black;
-  margin-right: 30px;
+  margin-right: 4vw;
 }
 
 .name{
   display: inline-block;
-  margin-right: 50px;
+  margin-right: 6vw;
   font-size: 20px;
 }
 
 .post{
   display: inline-block;
-  padding: 10px 30px;
+  padding: 2vh 2.5vw;
   font-size: 15px;
   text-decoration: none;
-  border: 1px  solid black;
+  border: 1px  solid;
   color: #00005d;
 }
 
 .title{
+  font-size: 50px;
   text-decoration: none;
   color:#00005d;
 }
@@ -78,14 +78,11 @@ main{
 }
 .left-bar {
   width: 80%;
-  color: black;
   margin: 10px;
   padding: 10px;
 }
 .right-bar {
   width: 20%;
-  height: 40%;
-  color: black;
   margin: 10px;
   padding: 10px;
 }
@@ -117,25 +114,28 @@ footer {
 /*メインメニュー*/
 
 .menu-title {
-text-align: center;
+  font-size: 25px;
+  margin-bottom: 2vh;
+  text-align: center;
 }
 
 .menu-list{
   font-size:15px;
-  padding:5px 20px;
+  padding:1.5vh 1vw;
   border-top: 2px solid #0bd;
   border-bottom: 2px solid #0bd;
 }
 
 .menu-item{
-  border-bottom:1px solid black;
+  border-bottom:1px solid;
   display: block;
   color:#33160e;
   text-decoration: none;
-  padding:5px 0px;
+  padding:1vh 0;
 }
 
-/*フォーム*/
+/*投稿、編集、検索フォーム兼用*/
+
 .style-set-main{
   padding: 0 2vw;
 }
@@ -147,79 +147,16 @@ text-align: center;
 .style-set-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom:30px;
+  margin-bottom: 5vh;
   text-align: center;
-}
-
-.style-indispensable {
-  background: #ea352d;
-  margin-left: 110px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.style-indispensable-blue{
-  background: blue;
-  margin-left: 110px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.indispensable {
-  background: #ea352d;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.indispensable-blue{
-  background: blue;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
 }
 
 .style{
   margin: 20px 0;
+  width: 80vw;
 }
 
-.result-style{
-  margin:20px;
-  text-align: center;
-}
-
-.result-text{
-  font-size:30px;
-}
-
-.style-text{
-  width: 150%;
-  height: 80px;
-  padding: 3px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  margin-left: 140px;
-}
-
-.style_label_form{
-  margin-left: 140px;
-}
-
-.style_label{
-  text-align: center;
-}
+/*投稿、編集フォームのみ*/
 
 .form-main-top{
   display: flex;
@@ -229,45 +166,100 @@ text-align: center;
   width:60%
 }
 
+.style-indispensable {
+  background: #ea352d;
+  margin-left: 8vw;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.style-indispensable-blue{
+  background: blue;
+  margin-left: 8vw;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.style_label_form{
+  margin-left: 10vw;
+}
+
+.style-text{
+  width: 50vw;
+  height: 10vh;
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-left: 10vw;
+}
+
 .image-item{
   width: 40%;
   height: 40%;
 }
 
-.description{
-  text-align: center;
-  margin:5px;
-}
-
-.re-btn{
-  margin: 120px;
-  font-size: 20px;
+.send-btn{
+  margin-left: 10vw;
+  padding: 1vh 2vw;
+  margin-bottom: 1.5vh;
 }
 
 .form-btn{
-  margin-left: 140px;
+  margin-left: 10vw;
   font-size: 20px;
 }
 
-.ja-btn{
-  display: flex;
-  justify-content: space-around;
-  font-size: 20px;
+/*検索フォーム、検索結果フォームのみ*/
+
+.indispensable {
+  background: #ea352d;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-.send-btn{
-  margin-left:140px;
-  padding: 5px 15px;
+.indispensable-blue{
+  background: blue;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.result-style{
+  margin-bottom:3vh;
+  text-align: center;
+}
+
+.result-text{
+  font-size:30px;
+}
+
+.style_label{
+  text-align: center;
+}
+
+.re-btn{
+  font-size: 20px;
 }
 
 .search-btn{
-  padding: 5px 15px;
+  padding: 1vh 2vw;
 }
 
 /*詳細画面*/
 
 .detail-table {
-  margin-bottom: 30px;
+  margin-bottom: 5vh;
   width: 100%;
 }
 
@@ -276,13 +268,13 @@ text-align: center;
   width: 20%;
   background-color:cornsilk;
   border: 1px solid #dedede;
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
 }
 
 .detail-value {
   width: 80%;
-  padding: 20px;
+  padding: 2.5vh 2vw;
   border: 1px solid #dedede;
   font-size: 14px;
   background-color: white;
@@ -290,7 +282,7 @@ text-align: center;
 
 .detail-value-memo {
   width: 80%;
-  padding: 20px;
+  padding: 2.5vh 2vw;
   border: 1px solid #dedede;
   font-size: 14px;
   background-color: white;
@@ -302,15 +294,21 @@ text-align: center;
 }
 
 .show-box{
-margin-bottom: 30px;
+margin-bottom: 3.5vh;
 text-align:center;
 }
 
 .show-btn{
   text-decoration: none;
   border:1px solid ;
-  padding: 10px 20px;
-  margin: 0 60px;
+  padding: 2.5vh 3vw;
+  margin: 0 8vw;
+}
+
+.ja-btn{
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
 }
 
 /*kaminari*/
@@ -337,15 +335,15 @@ text-align: center;
 font-size: 30px;
 text-align: center;
 border: 3px solid #0bd;
-padding: 30px 0;
-margin: 0 50px 50px 50px;
+padding: 4vh 0;
+margin: 0 5vw 5vh;
 }
 
 .first-contact {
-  padding: 10px;
+  padding: 0.5vh 0.5vw;
 }
 
-.first-contact>.title {
+.contact-title {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
@@ -359,16 +357,15 @@ margin: 0 50px 50px 50px;
   flex-wrap: wrap;
 }
 
-.contact-lists>.list {
+.contact-list {
   width: 35vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
 }
 
 .list-pict {
-  margin-bottom: 20px;
+  margin-bottom: 3vh;
   width: 100%;
   border: 1px solid;
 }
@@ -377,37 +374,665 @@ margin: 0 50px 50px 50px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 20%;
+  height: 10%;
   font-size: 30px;
   text-align: center;
   background-color: #0bd;
   color: #fff;
+  border-radius: 20px;
 }
 
 .contact-list-text {
   font-weight: bold;
   font-size: 20px;
-  line-height: 50px;
+  line-height: 8vh;
 }
 
 .contact-list-underline {
   border-bottom: 2px dashed;
 }
 
-.contact-description-ano{
-  padding-top: 50px;
-  font-size: 18px;
-  margin-top: 20px;
-}
-
 .contact-description {
   font-size: 18px;
-  margin-top: 20px;
+  margin: 2.5vh 0;
 }
 
 /*devise*/
 .devise-btn{
-  margin: 60px;
+  margin: 10vh;
   font-size: 15px;
+}
+
+
+/* タブレット表示時 */
+
+@media (max-width: 1080px) {
+
+  /*ヘッダー*/
+
+.left-header{
+  margin-left: 3vw;
+}
+
+.right-header{
+  margin-right: 3vw;
+}
+
+.name{
+  margin-right: 5vw;
+  font-size: 16px;
+}
+
+.post{
+  font-size: 13px;
+}
+
+.title{
+  font-size: 45px;
+}
+
+/*メイン*/
+
+.left-bar {
+  width: 77%;
+  margin: 8px;
+  padding: 8px;
+}
+.right-bar {
+  width: 23%;
+  margin: 8px;
+  padding: 8px;
+}
+.set-style{
+  font-size: 25px;
+}
+
+/*メインメニュー*/
+
+.menu-title {
+  font-size:20px;
+  }
+
+.menu-list{
+  font-size:14px;
+}
+
+.menu-item{
+  padding:1.5vh 0;
+}
+
+/*投稿、編集、検索フォーム兼用*/
+
+.style{
+  margin: 25px 0;
+}
+
+/*投稿、編集フォームのみ*/
+
+.style_label_form{
+  margin-left: 12vw;
+}
+
+.style-text{
+  width: 55vw;
+  margin-left: 12vw;
+}
+
+.image-item{
+  width: 30%;
+  height: 30%;
+}
+
+.send-btn{
+  margin-left: 12vw;
+}
+
+.form-btn{
+  margin-left: 12vw;
+}
+
+/*検索フォーム、検索結果フォームのみ*/
+
+.result-text{
+  font-size:25px;
+}
+
+/*詳細画面*/
+
+.show-btn{
+  text-decoration: none;
+  border:1px solid ;
+  padding: 2vh 2.5vw;
+  margin: 0 7vw;
+}
+
+/*ログイン前*/
+
+.prompt{
+font-size: 18px;
+}
+
+.first-exp{
+font-size: 20px;
+border: 2px solid #0bd;
+padding: 20px 0;
+margin: 0.4vh 0.4vw;
+}
+
+.contact-list-number {
+  position: absolute;
+  font-size: 25px;
+}
+
+.contact-list-text {
+  font-size: 18px;
+  line-height: 7vh;
+}
+
+.contact-description {
+  font-size: 16px;
+}
+}
+
+
+/* 小さめタブレットor大きめスマホ表示時 */
+@media (max-width: 840px) {
+
+  /*ヘッダー*/
+
+.left-header{
+  margin-left: 2.5vw;
+}
+
+.right-header{
+  margin-right: 2.5vw;
+}
+
+.name{
+  margin-right: 3.5vw;
+  font-size: 16px;
+}
+
+.post{
+  font-size: 13px;
+}
+
+.title{
+  font-size: 40px;
+}
+
+/*メイン*/
+
+.left-bar {
+  width: 74%;
+  margin: 8px;
+  padding: 8px;
+}
+.right-bar {
+  width: 26%;
+  margin: 8px;
+  padding: 8px;
+}
+.set-style{
+  font-size: 24px;
+}
+
+/*メインメニュー*/
+
+.menu-title {
+  font-size:16px;
+  }
+
+.menu-list{
+  font-size:14px;
+}
+
+.menu-item{
+  padding:1.5vh 0;
+}
+
+/*投稿、編集、検索フォーム兼用*/
+
+.style{
+  margin: 30px 0;
+}
+
+/*投稿、編集フォームのみ*/
+
+.style-text{
+  width: 60vw;
+}
+
+.image-item{
+  width: 33%;
+  height: 33%;
+}
+
+/*検索フォーム、検索結果フォームのみ*/
+
+.result-text{
+  font-size:22px;
+}
+
+/*詳細画面*/
+
+.detail-item {
+  font-size: 14px;
+}
+
+.detail-value {
+  font-size: 12px;
+}
+
+.detail-value-memo {
+  font-size: 12px;
+}
+
+.show-btn{
+  padding: 1.6vh 2vw;
+  margin: 0 5vw;
+}
+
+/*ログイン前*/
+
+.prompt{
+font-size: 16px;
+}
+
+.first-exp{
+font-size: 18px;
+border: 2px solid #0bd;
+padding: 20px 0;
+margin: 0.4vh 0.4vw;
+}
+
+.contact-list-number {
+  position: absolute;
+  font-size: 25px;
+}
+
+.contact-list-text {
+  font-size: 16px;
+  line-height: 6vh;
+}
+
+.contact-description {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 720px) {
+
+  /*ヘッダー*/
+
+.left-header{
+  margin-left: 2vw;
+}
+
+.right-header{
+  margin-right: 2vw;
+}
+
+.name{
+  margin-right: 2vw;
+  font-size: 12px;
+}
+
+.post{
+  font-size: 12px;
+}
+.title{
+  font-size:38px;
+}
+
+/*メイン*/
+
+.left-bar {
+  width: 71%;
+  margin: 6px;
+  padding: 6px;
+}
+.right-bar {
+  width: 29%;
+  margin: 6px;
+  padding: 6px;
+}
+.set-style{
+  font-size: 22px;
+}
+
+/*メインメニュー*/
+
+.menu-title {
+  font-size:15px;
+  }
+
+.menu-list{
+  font-size:14px;
+}
+
+.menu-item{
+  padding:2vh 0;
+}
+
+/*投稿、編集、検索フォーム兼用*/
+
+.style{
+  margin: 35px 0;
+}
+
+/*投稿、編集フォームのみ*/
+
+.style-text{
+  width: 60vw;
+}
+
+.image-item{
+  width: 33%;
+  height: 33%;
+}
+
+/*検索フォーム、検索結果フォームのみ*/
+
+.result-text{
+  font-size:20px;
+}
+
+/*詳細画面*/
+
+.detail-item {
+  font-size: 14px;
+}
+
+.detail-value {
+  font-size: 12px;
+}
+
+.detail-value-memo {
+  font-size: 12px;
+}
+
+.show-btn{
+  padding: 1.6vh 1.8vw;
+  margin: 0 4vw;
+}
+
+/*ログイン前*/
+
+.prompt{
+font-size: 16px;
+}
+
+.first-exp{
+font-size: 18px;
+border: 2px solid #0bd;
+padding: 20px 0;
+margin: 0.4vh 0.4vw;
+}
+
+.contact-list-number {
+  position: absolute;
+  font-size: 25px;
+}
+
+.contact-list-text {
+  font-size: 16px;
+  line-height: 6vh;
+}
+
+.contact-description {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 600px) {
+
+    /*ヘッダー*/
+
+.left-header{
+  margin-left: 1vw;
+}
+
+.right-header{
+  margin-right: 1vw;
+}
+
+.name{
+  margin-right: 1vw;
+  font-size: 11px;
+}
+
+.post{
+  font-size: 11px;
+}
+.title{
+  font-size:30px;
+}
+
+/*メイン*/
+
+.left-bar {
+  width: 69%;
+  margin: 4px;
+  padding: 4px;
+}
+.right-bar {
+  width: 31%;
+  margin: 4px;
+  padding: 4px;
+}
+.set-style{
+  font-size: 22px;
+}
+
+/*メインメニュー*/
+
+.menu-title {
+  font-size:14px;
+  }
+
+.menu-list{
+  font-size:13px;
+}
+
+.menu-item{
+  padding:2.2vh 0;
+}
+
+/*投稿、編集フォームのみ*/
+
+.style-text{
+  width: 65vw;
+}
+
+.image-item{
+  width: 20%;
+  height: 20%;
+}
+
+/*検索フォーム、検索結果フォームのみ*/
+
+.result-text{
+  font-size:20px;
+}
+
+/*詳細画面*/
+
+.detail-item {
+  font-size: 12px;
+}
+
+.detail-value {
+  font-size: 11px;
+}
+
+.detail-value-memo {
+  font-size: 11px;
+}
+
+.show-btn{
+  font-size:12px;
+  padding: 1.2vh 1.4vw;
+  margin: 0 4vw;
+}
+
+/*ログイン前*/
+
+.prompt{
+font-size: 13px;
+}
+
+.first-exp{
+font-size: 16px;
+border: 2px solid #0bd;
+padding: 20px 0;
+margin: 0.4vh 0.4vw;
+}
+
+.contact-list-number {
+  position: absolute;
+  font-size: 25px;
+}
+
+.contact-list-text {
+  font-size: 16px;
+  line-height: 6vh;
+}
+
+.contact-description {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 480px) {
+
+  /*ヘッダー*/
+
+.left-header{
+margin-left: 0.2vw;
+}
+
+.right-header{
+margin-right: 0.2vw;
+}
+
+.name{
+margin-right: 0.5vw;
+font-size: 9px;
+}
+
+.post{
+font-size: 9px;
+}
+.title{
+font-size:25px;
+}
+
+/*メイン*/
+
+.left-bar {
+width: 68%;
+margin: 2px;
+padding: 2px;
+}
+.right-bar {
+width: 32%;
+margin: 10px 2px;
+padding: 2px;
+}
+.set-style{
+font-size: 22px;
+}
+
+/*メインメニュー*/
+
+.menu-title {
+font-size:12px;
+}
+
+.menu-list{
+font-size:11px;
+}
+
+.menu-item{
+padding:1.8vh 0;
+}
+
+/*投稿、編集フォームのみ*/
+
+.style-text{
+width: 65vw;
+}
+
+.image-item{
+width: 20%;
+height: 20%;
+}
+
+/*検索フォーム、検索結果フォームのみ*/
+
+.result-text{
+font-size:20px;
+}
+
+/*詳細画面*/
+
+.detail-item {
+font-size: 10px;
+}
+
+.detail-value {
+font-size: 10px;
+}
+
+.detail-value-memo {
+font-size: 10px;
+}
+
+.show-btn{
+font-size:10px;
+padding: 1vh 1.2vw;
+margin: 0 4vw;
+}
+
+/*ログイン前*/
+
+.prompt{
+font-size: 12px;
+}
+
+.first-exp{
+font-size: 13px;
+border: 2px solid #0bd;
+padding: 20px 0;
+margin: 0.2vh 0.2vw;
+}
+
+.contact-list-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20%;
+  height: 10%;
+  font-size: 20px;
+  text-align: center;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.contact-list-number {
+position: absolute;
+font-size: 20px;
+}
+
+.contact-list-text {
+font-size: 13px;
+line-height: 6vh;
+}
+
+.contact-description {
+font-size: 12px;
+}
 }

@@ -27,3 +27,112 @@ img {
   margin: 20px;
   
 }
+
+@media (max-width: 840px) {
+
+  img {
+    height: 170px;
+    width: 170px;
+    object-fit: contain;
+  }
+  
+  .image-small{
+    height: 110px;
+    width: 110px;
+    object-fit: contain;
+    margin: 10px;
+  }
+  
+  .image-big{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px;
+  }
+  
+  .image-bigger{
+    height: 350px;
+    width: 350px;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px;
+    
+  }
+}
+
+@media (max-width: 600px) {
+
+  img {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+  }
+  
+  .image-small{
+    height: 110px;
+    width: 110px;
+    object-fit: contain;
+    margin: 10px;
+  }
+  
+  .image-big{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px;
+  }
+  
+  .image-bigger{
+    height: 350px;
+    width: 350px;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px;
+  }
+
+  .list-pict{
+    height: 220px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    margin: 30px 0 0 30px;
+
+  }
+  
+  .image-small{
+    height: 125px;
+    width: 125px;
+    object-fit: contain;
+    margin: 10px;
+  }
+  
+  .image-big{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px;
+  }
+  
+  .image-bigger{
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px;
+  }
+
+  .list-pict{
+    height: 30vh;
+    width: 30vw;
+  }
+}
