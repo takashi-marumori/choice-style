@@ -64,20 +64,20 @@
 
 # 機能
 
-- トップページ（ログイン前）
-<img src="https://i.gyazo.com/28fae4cf0e00b77e468225d79c3b1db5.png" width= 50%><br />
+- トップページ（ログイン前）<br />
+<img src="https://i.gyazo.com/28fae4cf0e00b77e468225d79c3b1db5.png" width= 50%>
 
-- トップページ（ログイン前）
-<img src="https://i.gyazo.com/c1d53f870576db14c4254d1c3cc191f6.png" width= 50%><br />
+- トップページ（ログイン前）<br />
+<img src="https://i.gyazo.com/c1d53f870576db14c4254d1c3cc191f6.png" width= 50%>
 
-- ユーザーの詳細画面
-<img src="https://i.gyazo.com/d9445468058aace9615b5fca251fde20.png" width= 50%><br />
+- ユーザーの詳細画面<br />
+<img src="https://i.gyazo.com/d9445468058aace9615b5fca251fde20.png" width= 50%>
 
-- 登録する様子(gif)
-<img src="https://i.gyazo.com/d4ef2257bd41525dc5a087467f747042.gif" width= 50%><br />
+- 登録する様子(gif)<br />
+<img src="https://i.gyazo.com/d4ef2257bd41525dc5a087467f747042.gif" width= 50%>
 
-- ランダムで出力される様子(gif)
-<img src="https://i.gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa.gif" width= 50%><br />
+- ランダムで出力される様子(gif)<br />
+<img src="https://i.gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa.gif" width= 50%>
 
 # ER図
 <img src="https://i.gyazo.com/4b002fe187443cd225e4e8583cb72a6d.png" width= 50%>
