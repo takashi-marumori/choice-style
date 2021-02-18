@@ -298,6 +298,11 @@ margin-bottom: 3.5vh;
 text-align:center;
 }
 
+
+.lottery{
+font-size: 120%;
+}
+
 .show-btn{
   text-decoration: none;
   border:1px solid ;
@@ -380,7 +385,7 @@ margin: 0 5vw 5vh;
   text-align: center;
   background-color: #0bd;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .contact-list-text {

@@ -7,6 +7,10 @@
 # URL
 - https://choice-style.herokuapp.com/
 
+# Basic認証
+- ID:yggd
+- パスワード:5165
+
 # テスト用アカウント
 - アドレス:test@test
 - パスワード:aaa111
@@ -58,12 +62,28 @@
 |ランダム出力時に複数の種類表示機能|靴と靴下など、２種類以上出したい時にその回数分だけ検索しないといけないため|検索結果からidの異なる複数種類出力させる方法がわからなかった|ransackの更なる理解が必要|
 |ajaxを利用して検索結果をその場に出す機能|詳細などの検索結果を横に出せれば、画面遷移の必要がなくなるため|jsonでの通信がうまくいかず|javascriptの更なる理解が必要<br />ユーザー詳細を触っている時に、before_action :authenticate_user!をコントローラーに定義しているとrender json:が変な挙動をすることを確認。<br />authenticate_user!を外せば何か変わるかもしれない。要検証|
 
-# 機能のgif
-- ランダムで出力される様子
-[![Image from Gyazo](https://i.gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa.gif)](https://gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa)
+# 機能
+
+- トップページ（ログイン前）
+<img src="https://i.gyazo.com/28fae4cf0e00b77e468225d79c3b1db5.png" width= 50%><br />
+
+- トップページ（ログイン前）
+<img src="https://i.gyazo.com/c1d53f870576db14c4254d1c3cc191f6.png" width= 50%><br />
+
+- ユーザーの詳細画面
+<img src="https://i.gyazo.com/d9445468058aace9615b5fca251fde20.png" width= 50%><br />
+
+- 登録する様子(gif)
+<img src="https://i.gyazo.com/d4ef2257bd41525dc5a087467f747042.gif" width= 50%><br />
+
+- ランダムで出力される様子(gif)
+<img src="https://i.gyazo.com/7542c4e9c93fd92e1411a9ea08d39bfa.gif" width= 50%><br />
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/4b002fe187443cd225e4e8583cb72a6d.png)](https://gyazo.com/4b002fe187443cd225e4e8583cb72a6d)
+<img src="https://i.gyazo.com/4b002fe187443cd225e4e8583cb72a6d.png" width= 50%>
+
+# 画面遷移図
+![choice-style-transition](https://user-images.githubusercontent.com/76422764/108343745-a4d66a00-721f-11eb-937c-e921e13f6458.png)
 
 # テーブル設計
 
@@ -96,9 +116,10 @@
 - rails 6.0.0
 
 ## git clone
-% cd
-% git clone https://github.com/takashi-marumori/choice-style.git
-% bundle install
-% yarn install
-% rails db:create
-% rails db:migrate
+% cd<br />
+% git clone https://github.com/takashi-marumori/choice-style.git<br />
+% bundle install<br />
+% yarn install<br />
+% rails db:create<br />
+% rails db:migrate<br />
+% rails s<br />
