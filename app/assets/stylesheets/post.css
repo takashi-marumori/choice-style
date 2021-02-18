@@ -1023,7 +1023,7 @@ margin: 0;
 }
 
 .contact-lists {
-  justify-content:space-between;
+  margin-top: 70px;
 }
 
 .contact-list-number {
@@ -1034,11 +1034,9 @@ font-size: 20px;
 .contact-list-text {
 font-size: 13px;
 line-height: 6vh;
-text-align: center;
 }
 
 .contact-description {
 font-size: 12px;
-text-align: center;
 }
 }
