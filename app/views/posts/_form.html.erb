@@ -19,7 +19,7 @@
         <div class="style">
         <span class="style-indispensable">必須</span>
         <%= f.label :clothes_id, "スタイルの種類を選択" %><br />
-        <%= f.collection_select(:clothes_id, Clothes.all, :id, :name, {}, {class: :style_label_form}) %>
+        <%= f.collection_select(:clothes_id, Clothes.all, :id, :name, {}, {class: :style_label_form}) %><br />
           <% if @post.errors.include?(:clothes_id) %>
             <span class="error-message"><%= @post.errors.full_messages_for(:clothes_id).first %></span>
           <% end %>
@@ -28,7 +28,7 @@
         <div class="style">
         <span class="style-indispensable">必須</span>
         <%= f.label :season_id, "スタイルを身につけたい季節を選択" %><br />
-        <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class: :style_label_form}) %>
+        <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class: :style_label_form}) %><br />
           <% if @post.errors.include?(:season_id) %>
             <span class="error-message"><%= @post.errors.full_messages_for(:season_id).first %></span>
           <% end %>
@@ -37,7 +37,7 @@
         <div class="style">
         <span class="style-indispensable">必須</span>
         <%= f.label :gender_id, "スタイルのジャンルを選択" %><br />
-        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: :style_label_form}) %>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: :style_label_form}) %><br />
           <% if @post.errors.include?(:gender_id) %>
             <span class="error-message"><%= @post.errors.full_messages_for(:gender_id).first %></span>
           <% end %>

@@ -2,5 +2,37 @@
   font-size: 15px;
   list-style: circle;
   color: red;
-  margin-left:140px;
+  margin-left:10vw;
+}
+
+.registration-error-message{
+  font-size: 15px;
+  list-style: circle;
+  color: red;
+  text-align: center;
+}
+
+.field_with_errors{
+  display: contents;
+}
+
+@media (max-width: 600px) {
+
+  .error-message {
+    font-size: 14px;
+  }
+
+  .registration-error-message{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-message {
+    font-size: 13px;
+  }
+
+  .registration-error-message{
+    font-size: 13px;
+  }
 }
