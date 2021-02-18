@@ -132,7 +132,7 @@ img {
   }
 
   .list-pict{
-    height: 30vh;
-    width: 30vw;
+    height: auto;
+    width: auto;
   }
 }

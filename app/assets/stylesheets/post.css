@@ -1006,13 +1006,13 @@ font-size: 12px;
 font-size: 13px;
 border: 2px solid #0bd;
 padding: 20px 0;
-margin: 0.2vh 0.2vw;
+margin: 0;
 }
 
 .contact-list-number {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 30px;
+  left: 30px;
   width: 20%;
   height: 10%;
   font-size: 20px;
@@ -1020,6 +1020,10 @@ margin: 0.2vh 0.2vw;
   background-color: #0bd;
   color: #fff;
   border-radius: 20px;
+}
+
+.contact-lists {
+  justify-content:space-between;
 }
 
 .contact-list-number {
@@ -1030,9 +1034,11 @@ font-size: 20px;
 .contact-list-text {
 font-size: 13px;
 line-height: 6vh;
+text-align: center;
 }
 
 .contact-description {
 font-size: 12px;
+text-align: center;
 }
 }
